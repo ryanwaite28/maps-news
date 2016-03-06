@@ -144,16 +144,29 @@ $(document).ready(function(){
 		$(".search-div").hide()
 		$("#img-div").hide()
 		$("#news-div").hide()
-		$("#map-div").show()
-
+		$("#mapdiv").show()
 	})
 
 	search.click(function(){
 		$(".search-div").show()
 		$("#img-div").show()
 		$("#news-div").show()
-		$("#map-div").hide()
+		$("#mapdiv").hide()
+	})
 
+   $(window).resize(function(){
+
+      var cWidth = $(window).width();
+
+      if(cWidth >= 992) {
+         $(".search-div").show()
+   		$("#img-div").show()
+   		$("#news-div").show()
+   		$("#mapdiv").show()
+      }
+      else {
+         // Do Nothing
+      }
 
 	})
 
